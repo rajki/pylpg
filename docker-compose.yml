@@ -1,0 +1,8 @@
+services:
+  base:
+    image: python:3.10
+    platform: linux/x86_64 # LPG only works with x86 arch & Linux
+    command: ["/bin/sh", "/init.sh"]
+    volumes:
+      - "./:/pylpg"
+      - "./init.sh:/init.sh"
